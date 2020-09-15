@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+
+
+
+    <style>
+
+        body, html {height: 100%}
+
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Open Sans Condensed", sans-serif}
+
+        .menu {display: none}
+
+        .bgimg {
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 90%;
+            background-image: linear-gradient(to bottom right, #4A90E2, #DCA8E4);
+        }
+
+        .grad {
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 90%;
+            background-image: linear-gradient(to bottom right, #4A90E2, #D4EFFF); 
+        }
+
+        .grad2 {
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 90%;
+            background-image: linear-gradient(to bottom right, #DEB9E4, #D4EFFF); 
+        }
+
+        .grad3 {
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 90%;
+            background-image: linear-gradient(to bottom right, #447CAD, #4A90E2); 
+        }
+
+        .grad4 {
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 90%;
+            background-image: linear-gradient(to bottom right, #4A90E2, #DCA8E4); 
+        }
+
+        .grad5 {
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 90%;
+            background-image: linear-gradient(to bottom right, #DCA8E4, #447CAD); 
+        }
+
+        .grad7 {
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 90%;
+            background-image: linear-gradient(to bottom right, #447CAD, #DCA8E4); 
+        }
+
+        .grad6 {
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 90%;
+            background-image: linear-gradient(to bottom right, #447CAD, #4A90E2); 
+        }
+
+        /* capybara animation */
+        .capybara {
+            animation: sway1 10s infinite;
+            transform-origin: 50% 100% 0;
+            opacity: 0.9;
+        }
+        @keyframes sway1 {
+            0%, 100%{ transform: rotate(-18deg);}
+            50%{ transform: rotate(18deg); }
+        }
+
+        /* capibara in glasses shaking */
+        .inglasses:hover {
+            animation: shake 0.5s;
+            animation-iteration-count: infinite;
+            animation-delay: 2s;
+        }
+
+        .inglasses2 {
+            animation: shake ;
+            animation-iteration-count: 7;
+            animation-delay: 2s;
+            animation-duration: 0.3s;
+        }
+
+        @keyframes shake {
+            0% { transform: translate(1px, 1px) rotate(0deg); }
+            10% { transform: translate(-1px, -2px) rotate(-1deg); }
+            20% { transform: translate(-3px, 0px) rotate(1deg); }
+            30% { transform: translate(3px, 2px) rotate(0deg); }
+            40% { transform: translate(1px, -1px) rotate(1deg); }
+            50% { transform: translate(-1px, 2px) rotate(-1deg); }
+            60% { transform: translate(-3px, 1px) rotate(0deg); }
+            70% { transform: translate(3px, 1px) rotate(-1deg); }
+            80% { transform: translate(-1px, -1px) rotate(1deg); }
+            90% { transform: translate(1px, 2px) rotate(0deg); }
+            100% { transform: translate(1px, -2px) rotate(-1deg); }
+        }
+
+
+        /*moving heads*/
+        .move {
+            width: 100%;
+            height: 100px;
+            animation: animateCloud 50s linear infinite;
+            background-image: url("wallpaper2.png");
+            opacity: 0.2;
+            position: relative;
+            background-repeat: repeat-x;
+            background position: 0 0;
+        }
+
+        .move2{
+            width: 100%;
+            height: 100px;
+            animation: animateCloud 50s linear infinite;
+            background-image: url("sp.png");
+            opacity: 0.2;
+            position: relative;
+            background-repeat: repeat-x;
+            background position: 0 0;
+        }
+
+        @keyframes animateCloud  {
+            0% {background position: 0 0;}
+            100% {background-position: 1280px 0;}
+        }
+
+
+        /* Cards styling */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Float four columns side by side */
+        .column {
+            float: left;
+            width: 25%;
+            padding: 0 10px;
+        }
+
+        /* Remove extra left and right margins, due to padding */
+        .row {margin: 0 -5px;}
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive columns */
+        @media screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+                display: block;
+                display: block;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Style the counter cards */
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 16px;
+            text-align: center;
+            background-color: #f1f1f1;
+
+        }
+
+
+        /*Three columns inside cards*/
+        /* Create three equal columns that floats next to each other */
+        .column3 {
+            float: left;
+            width: 33.33%;
+            padding: 10px;
+        }
+
+        .column4 {
+            float: left;
+            width: 25%;
+            padding: 10px;
+            height: 300px; /* Should be removed. Only for demonstration */
+        }
+
+        /* Clear floats after the columns */
+        .row2:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+        /* still circles on display*/
+        .circle {
+            width: 300px;
+            height: 300px;
+            background: #DCA8E4;
+            left:0px;
+            border-radius: 50%;
+            opacity: 0.2;
+            position: absolute
+        }
+
+        .circle2 {
+            width: 550px;
+            height: 550px;
+            background: cyan;
+            border-radius: 50%;
+            opacity: 0.2;
+            position: absolute;
+            top: -20%; left:-50%;
+            float:center;
+        }
+
+
+        /* floating balls*/
+        /* https://codepen.io/Keikabile/pen/vFzon*/
+        .container{
+            width:100%;
+            height:100%;
+        }
+
+        .xx{
+
+        }
+
+        .xx{
+            background:#447CAD;
+
+            margin:0;
+            border-radius:100%;
+            position:absolute;
+        }
+
+        #one{
+            -webkit-animation: move 25s infinite; 
+            -moz-animation:    move 25s infinite; 
+            -o-animation:      move 25s infinite; 
+            animation:        move 25s infinite;
+        }
+
+        #two{
+            -webkit-animation: move 70s infinite; 
+            -moz-animation:    move 70s infinite; 
+            -o-animation:      move 70s infinite; 
+            animation:        move 70s infinite;
+        }
+
+        #three{
+            -webkit-animation: move 50s infinite; 
+            -moz-animation:    move 50s infinite; 
+            -o-animation:      move 50s infinite; 
+            animation:        move 50s infinite;
+        }
+
+        #four{
+            -webkit-animation: move 30s infinite; 
+            -moz-animation:    move 30s infinite; 
+            -o-animation:      move 30s infinite; 
+            animation:        move 30s infinite;
+        }
+
+        .aa{
+            background:#447CAD;
+
+            margin:0;
+            border-radius:100%;
+            position:absolute;
+        }
+
+        #aa{
+            -webkit-animation: move2 70s infinite; 
+            -moz-animation:    move2 70s infinite; 
+            -o-animation:      move2 70s infinite; 
+            animation:        move2 70s infinite;
+        }
+
+        #bb{
+            -webkit-animation: move2 50s infinite; 
+            -moz-animation:    move2  50s infinite; 
+            -o-animation:      move2  50s infinite; 
+            animation:        move2  50s infinite;
+        }
+
+        #cc{
+            -webkit-animation: move2 40s infinite; 
+            -moz-animation:    move2 40s infinite; 
+            -o-animation:      move2 40s infinite; 
+            animation:        move2 40s infinite;
+        }
+
+        #dd{
+            -webkit-animation: move2 100s infinite; 
+            -moz-animation:    move2 100s infinite; 
+            -o-animation:      move2 100s infinite; 
+            animation:        move2 100s infinite;
+        }
+
+        .ff{
+            margin:0;
+            border-radius:100%;
+            position:absolute;
+        }
+
+        #ee{
+            -webkit-animation: move3 25s infinite; 
+            -moz-animation:    move3 25s infinite; 
+            -o-animation:      move3 25s infinite; 
+            animation:         move3 25s infinite;
+        }
+        #fkf{
+            -webkit-animation: move4 50s infinite; 
+            -moz-animation:    move4 50s infinite; 
+            -o-animation:      move4 50s infinite; 
+            animation:         move4 50s infinite;
+        }
+        #gg{
+            -webkit-animation: move3 80s infinite; 
+            -moz-animation:    move3 80s infinite; 
+            -o-animation:      move3 80s infinite; 
+            animation:         move3 80s infinite;
+        }
+        #hh{
+            -webkit-animation: move5 100s infinite; 
+            -moz-animation:    move5 100s infinite; 
+            -o-animation:      move5 100s infinite; 
+            animation:         move5 100s infinite;
+        }
+
+        #ii{
+            -webkit-animation: move6 100s infinite; 
+            -moz-animation:    move6 100s infinite; 
+            -o-animation:      move6 100s infinite; 
+            animation:         move6 100s infinite;
+        }
+
+        #jj{
+            -webkit-animation: move6 50s infinite; 
+            -moz-animation:    move6 50s infinite; 
+            -o-animation:      move6 50s infinite; 
+            animation:         move6 50s infinite;
+        }
+
+        #kk{
+            -webkit-animation: move6 25s infinite; 
+            -moz-animation:    move6 25s infinite; 
+            -o-animation:      move6 25s infinite; 
+            animation:         move6 25s infinite;
+        }
+
+        @-moz-keyframes move {
+            0% {bottom:0px; left:0px; opacity:0;  	width: 100px; height: 100px; background:#D4EFFF;}
+            25%{bottom:50px; left:200px;opacity: 1; width:70px; height:70px;     background:#D4EFFF;}
+            50% {bottom:0px; left:300px;opacity: 1; width:60px; height:60px;  background:#DCA8E4;  }
+            80%{bottom:50%;  left:500px;opacity: 0; width:60px; height:60px;  background:#DCA8E4;}
+
+        }
+        @-webkit-keyframes move {
+            0% {bottom:0px; left:0px; opacity:0;  	width: 100px; height: 100px; background:#D4EFFF;}
+            25%{bottom:50px; left:200px;opacity: 1; width:70px; height:70px;     background:#D4EFFF;}
+            50% {bottom:0px; left:300px;opacity: 1; width:60px; height:60px;  background:#DCA8E4;  }
+            80%{bottom:50%;  left:500px;opacity: 0; width:60px; height:60px;  background:#DCA8E4;}
+
+        }
+        @-moz-keyframes move2 {
+            0% {bottom:0px; right:0px; opacity:0;  width:60px; height:60px; background:#447CAD;}
+            25%{bottom:50%; right:200px; opacity: 1; width:70px; height:70px;     background:#447CAD;}
+            50% {bottom:0px; right:300px; opacity: 1; width:60px; height:60px;  background:#DCA8E4;  }
+            65%{bottom:60px; right:500px; opacity: 1; width:100px; height:100px;  background:#DCA8E4;}
+            80%{bottom:30%;  right:600px; opacity: 1; width:80px; height:80px;  background:#DCA8E4;}
+            100%{bottom:80%; right:700px; opacity: 0; width:80px; height:80px;  background:#DCA8E4;}
+
+        }
+        @-webkit-keyframes move2 {
+            0% {bottom:0px; right:0px; opacity:0;  width:60px; height:60px; background:#447CAD;}
+            25%{bottom:50%; right:200px; opacity: 1; width:70px; height:70px;     background:#447CAD;}
+            50% {bottom:0px; right:300px; opacity: 1; width:60px; height:60px;  background:#DCA8E4;  }
+            65%{bottom:60px; right:500px; opacity: 1; width:100px; height:100px;  background:#DCA8E4;}
+            80%{bottom:30%;  right:600px; opacity: 1; width:80px; height:80px;  background:#DCA8E4;}
+            100%{bottom:80%; right:700px; opacity: 0; width:80px; height:80px;  background:#DCA8E4;}
+
+        }
+        @-moz-keyframes move3 {
+            0% {bottom:0px; margin:0 auto; opacity:0;  width:60px; height:60px; background:#447CAD;}
+            25%{bottom:50%; right:50%; opacity:0; width:70px; height:70px;     background:#447CAD;}
+            50% {bottom:0px; right:50%; opacity: 1; width:60px; height:60px;  background:#DCA8E4;  }
+            65%{bottom:60px; right:50%; opacity: 1; width:100px; height:100px;  background:#DCA8E4;}
+            80%{bottom:30%;  right:50%; opacity: 1; width:80px; height:80px;  background:#DCA8E4;}
+            100%{bottom:80%; right:50%; opacity: 0; width:80px; height:80px;  background:#DCA8E4;}
+        }
+        @-webkit-keyframes move3 {
+            0% {bottom:0px; margin:0 auto; opacity:0;  width:60px; height:60px; background:#447CAD;}
+            25%{bottom:50%; right:50%; opacity:0; width:70px; height:70px;     background:#447CAD;}
+            50% {bottom:0px; right:50%; opacity: 1; width:60px; height:60px;  background:#DCA8E4;  }
+            65%{bottom:60px; right:50%; opacity: 1; width:100px; height:100px;  background:#DCA8E4;}
+            80%{bottom:30%;  right:50%; opacity: 1; width:80px; height:80px;  background:#DCA8E4;}
+            100%{bottom:80%; right:50%; opacity: 0; width:80px; height:80px;  background:#DCA8E4;}
+        }
+        @-moz-keyframes move4 {
+            0% {bottom:0px; right:50%; opacity:1;  width:60px; height:60px; background:#DCA8E4;}
+            25%{bottom:50%; right:25%; opacity:0; width:70px; height:70px;     background:#447CAD;}
+            50% {bottom:0px; right:50%; opacity: 1; width:60px; height:60px;  background:#447CAD;  }
+            65%{bottom:60px; right:70%; opacity: 1; width:100px; height:100px;  background:#DCA8E4;}
+            80%{bottom:30%; right:80%; opacity: 1; width:80px; height:80px;  background:#447CAD;}
+            100%{bottom:80%; right:100%; opacity: 0; width:80px; height:80px;  background:#447CAD;}
+        }
+        @-webkit-keyframes move4 {
+            0% {bottom:0px; right:50%; opacity:1;  width:60px; height:60px; background:#DCA8E4;}
+            25%{bottom:50%; right:25%; opacity:0; width:70px; height:70px;     background:#447CAD;}
+            50% {bottom:0px; right:50%; opacity: 1; width:60px; height:60px;  background:#447CAD;  }
+            65%{bottom:60px;  right:70%; opacity: 1; width:100px; height:100px;  background:#DCA8E4;}
+            80%{bottom:30%;  right:80%; opacity: 1; width:80px; height:80px;  background:#447CAD;}
+
+            100%{bottom:80%;  right:100%; opacity: 0; width:80px; height:80px;  background:#447CAD;}
+        }
+        @-moz-keyframes  move4 {
+            0% {top:0px; right:50%; opacity:1;  width:60px; height:60px; background:#D4EFFF;}
+            25%{top:50%; right:25%; opacity:0; width:70px; height:70px;     background:#447CAD;}
+            50% {top:0px; right:50%; opacity: 1; width:60px; height:60px;  background:#447CAD;  }
+            65%{top:60px;  right:70%; opacity: 1; width:100px; height:100px;  background:#DCA8E4;}
+            80%{top:30%;  right:80%; opacity: 1; width:80px; height:80px;  background:#447CAD;}
+
+            100%{top:80%;  right:100%; opacity: 0; width:80px; height:80px;  background:#447CAD;}
+        }
+        @-webkit-keyframes move4 {
+            0% {top:0px; right:50%; opacity:1;  width:60px; height:60px; background:#D4EFFF;}
+            25%{top:50%; right:25%; opacity:0; width:70px; height:70px;     background:#447CAD;}
+            50% {top:0px; right:50%; opacity: 1; width:60px; height:60px;  background:#447CAD;  }
+            65%{top:60px;  right:70%; opacity: 1; width:100px; height:100px;  background:#DCA8E4;}
+            80%{top:30%;  right:80%; opacity: 1; width:80px; height:80px;  background:#447CAD;}
+            100%{top:80%;  right:100%; opacity: 0; width:80px; height:80px;  background:#447CAD;}
+        }
+
+        @-moz-keyframes move5 {
+            0% {top:0px; right:50%; opacity:1;  width:60px; height:60px; background:#DCA8E4;}
+            25%{top:50%; right:25%; opacity:0; width:70px; height:70px;     background:#447CAD;}
+            50% {top:0px; right:50%; opacity: 1; width:60px; height:60px;  background:#447CAD;  }
+            80%{top:60px;  right:70%; opacity: 1; width:100px; height:100px;  background:#D4EFFF;}
+            90%{top:30%;  right:80%; opacity: 1; width:80px; height:80px;  background:#447CAD;}
+            100%{top:80%;  right:100%; opacity: 0; width:80px; height:80px;  background:#DCA8E4;}
+        }
+
+        @-webkit-keyframes move5 {
+            0% {top:0px; right:50%; opacity:1;  width:60px; height:60px; background:#DCA8E4;}
+            25%{top:50%; right:25%; opacity:0; width:70px; height:70px;     background:#447CAD;}
+            50% {top:0px; right:50%; opacity: 1; width:60px; height:60px;  background:#447CAD;  }
+            80%{top:60px;  right:70%; opacity: 1; width:100px; height:100px;  background:#D4EFFF;}
+            90%{top:30%;  right:80%; opacity: 1; width:80px; height:80px;  background:#447CAD;}
+            100%{top:80%;  right:100%; opacity: 0; width:80px; height:80px;  background:#DCA8E4;}
+        }
+        @-moz-keyframes move6 {
+            0% {top:0px; right:0px; opacity:0;  width:60px; height:60px; background:#DCA8E4;}
+            25%{top:50%; right:200px; opacity: 1; width:70px; height:70px;     background:#DCA8E4;}
+            50% {top:0px; right:300px; opacity: 1; width:60px; height:60px;  background:#D4EFFF;  }
+            65%{top:60px;  right:500px; opacity: 1; width:100px; height:100px;  background:#D4EFFF;}
+            80%{top:30%;  right:600px; opacity: 1; width:80px; height:80px;  background:#D4EFFF;}
+            100%{top:80%;  right:700px; opacity: 0; width:80px; height:80px;  background:#D4EFFF;}
+        }
+        @-webkit-keyframes move6 {
+            0% {top:0px; right:0px; opacity:0;  width:60px; height:60px; background:#DCA8E4;}
+            25%{top:50%; right:200px; opacity: 1; width:70px; height:70px;     background:#DCA8E4;}
+            50% {top:0px; right:300px; opacity: 1; width:60px; height:60px;  background:#D4EFFF;  }
+            65%{top:60px;  right:500px; opacity: 1; width:100px; height:100px;  background:#D4EFFF;}
+            80%{top:30%;  right:600px; opacity: 1; width:80px; height:80px;  background:#D4EFFF;}
+            100%{top:80%;  right:700px; opacity: 0; width:80px; height:80px;  background:#D4EFFF;}
+        }
+        .outputdiv{
+            left:20px;
+            top:20px;
+            width:100px;
+            height:auto;
+            background:D4EFFF;
+            text-align:center;
+            border-radius:3px;
+            position:absolute;
+            bottom:10px;
+            z-index:9999;
+        }
+
+        .outputdiv{
+
+        }
+
+        .outputdiv{
+            -webkit-animation: moveX  2s infinite; 
+            -moz-animation:    moveX  2s infinite; 
+            -o-animation:      moveX  2s infinite; 
+            animation:         moveX  2s infinite;
+        }
+
+        @-moz-keyframes moveX {
+
+            0% { opacity:1;       background:#D4EFFF;}
+            25%{ opacity: 1;      background:#D4EFFF;}
+            50% { opacity: 1;     background:#DCA8E4;  }
+            65%{ opacity: 1;      background:#DCA8E4;}
+            80%{ opacity: 1;      background:#DCA8E4;}
+            100%{ opacity: 1;     background:#D4EFFF;}
+        }
+
+        @-webkit-keyframes moveX {
+
+            0% { opacity:1;       background:#D4EFFF;}
+            25%{ opacity: 1;      background:#D4EFFF;}
+            50% { opacity: 1;     background:#DCA8E4;  }
+            65%{ opacity: 1;      background:#DCA8E4;}
+            80%{ opacity: 1;      background:#DCA8E4;}
+            100%{ opacity: 1;     background:#D4EFFF;}
+        }
+
+        .click{
+            cursor:pointer;
+        }
+
+        .xxx1{
+            display:none
+        }
+        .xxx2{
+            display:none
+        }
+        .xxx3{
+            display:none
+        }
+        .xxx4{
+            display:none
+        }
+
+
+    </style>
+    <body>
+
+        <!-- Navbar (sit on top) -->
+        <div class="w3-top w3-hide-small">
+            <div class="w3-bar w3-text-white w3-xlarge w3-opacity w3-hover-opacity-off" id="myNavbar" style="background-color: #1A4270">
+                <a href="#" class="w3-bar-item w3-button w3-hover-indigo">HOME</a>
+                <a href="#about" class="w3-bar-item w3-button w3-hover-indigo">ABOUT</a>
+                <a href="#work" class="w3-bar-item w3-button w3-hover-indigo">STUDENT PROJECTS</a>
+                <a href="#contact" class="w3-bar-item w3-button w3-hover-indigo">CONTACT</a>
+            </div>
+        </div>
+
+        <!-- Header with image -->
+        <header class="bgimg w3-display-container" id="home">
+
+            <div class="xx xx1 click" id="one"></div>
+            <div class="xx xx2 click" id="two"></div>
+            <div class="xx xx3 click" id="three"></div>
+            <div class="xx xx4 click" id="four"></div>
+
+            <div class="aa click" id="aa"></div>
+            <div class="aa click" id="bb"></div>
+            <div class="aa click" id="cc"></div>
+            <div class="aa click" id="dd"></div>
+
+            <div class="ff xxx1 click" id="fkf" ></div>
+            <div class="ff xxx2 click" id="ee"></div>
+            <div class="ff xxx3 click" id="gg"></div>
+            <div class="ff xxx4 click" id="hh"></div>
+
+            <div class="ff click" id="ii"></div>
+            <div class="ff click" id="jj"></div>
+            <div class="ff click" id="kk"></div>
+
+            <div class="w3-display-middle w3-center">
+
+                <!-- blue circle -->
+                <div class="circle2"></div>     
+
+
+                <span class="w3-text-white w3-hide-small" style="font-size:100px">OLGA<br>OSIPOVA</span>
+
+                <!-- pink circle -->
+                <div class="circle"></div>
+
+
+                <!-- capybara pic -->
+                <div class="text-center capybara">
+                    <p></p>
+                    <img src="capi.png" alt="">
+                </div>
+
+            </div>
+        </header>
+
+        <!-- About Container -->
+        <div class="grad w3-container w3-padding-64 w3-xlarge w3-text-white" id="about">
+            <div class="w3-content">
+                <h1 class="w3-center w3-jumbo" style="margin-bottom:64px;">ABOUT ME</h1>
+
+                <!-- shaking image -->
+                <div class="w3-center" style="margin-top:64px; margin-bottom:64px">
+                    <img class="inglasses inglasses2" src="inglasses.png" alt="">
+                    <img class="inglasses inglasses2" src="inhat.png" alt="">
+                    <img class="inglasses inglasses2" src="withmakeup.png" alt="">
+                </div> 
+
+
+                <!-- Cards -->
+
+                <!--Education card-->
+                <div class="w3-panel w3-card grad3" style="margin-top:64px; margin-bottom:64px">
+                    <h1 class="w3-center w3-text-white grad4">EDUCATION</h1>
+
+                    <!-- Three columns inside card-->
+                    <div class="row2">
+                        <div class="column3">
+                            <h2>2019 - 2022</h2> 
+                        </div>
+                        <div class="column3">
+                            <h2>BSc in Business Information Technology</h2>
+                        </div>
+                        <div class="column3">
+                            <h2>FHNW, Basel</h2>
+                        </div>
+                    </div>
+
+                    <div class="row2">
+                        <div class="column3">
+                            <h2>2017 - 2019</h2>
+                        </div>
+                        <div class="column3">
+                            <h2>BSc in Computer Science (Management and Design specialization)</h2>
+                        </div>
+                        <div class="column3">
+                            <h2>FHNW, Brugg</h2> 
+                        </div>
+                    </div>
+                </div>
+                <!-- - --->
+
+                <!--Student Projects card-->
+                <div class="w3-panel w3-card grad3" style="margin-top:64px; margin-bottom:64px">
+                    <h1 class="w3-center grad4 w3-text-white" style="background-color: #DCA8E4;">STUDENT PROJECTS</h1>
+
+                    <!-- Three columns inside card-->
+                    <div class="row2">
+                        <div class="column3">
+                            <h2>2020</h2> 
+                        </div>
+                        <div class="column3">
+                            <h2>Requirements Engineer</h2>
+                        </div>
+                        <div class="column3">
+                            <h2>LyTai, Basel</h2>
+                        </div>
+                    </div>
+
+                    <div class="row2">
+                        <div class="column3">
+                            <h2>2019</h2>
+                        </div>
+                        <div class="column3">
+                            <h2>Software Developer</h2>
+
+                        </div>
+                        <div class="column3">
+                            <h2>FitnessWork App, Zurich</h2> 
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="column3">
+                            <h2>2018</h2>
+                        </div>
+                        <div class="column3">
+                            <h2>Product Owner</h2>
+                        </div>
+                        <div class="column3">
+                            <h2>FitnessWork App, Zurich</h2> 
+                        </div>
+                    </div>
+
+                    <div class="row2">
+                        <div class="column3">
+                            <h2>2018</h2>
+                        </div>
+                        <div class="column3">
+                            <h2>Requirements Engineer</h2>
+                        </div>
+                        <div class="column3">
+                            <h2>Berufsfachschule BBB, Baden</h2> 
+                        </div>
+                    </div>
+
+                    <div class="row2">
+                        <div class="column3">
+                            <h2>2017</h2>
+                        </div>
+                        <div class="column3">
+                            <h2>Usability Manager</h2>
+                        </div>
+                        <div class="column3">
+                            <h2>Berufsfachschule BBB, Baden</h2> 
+                        </div>
+                    </div>
+                </div>
+                <!-- - --->
+
+                <!-- skills card-->   
+                <div class="w3-third w3-container">
+                    <div class="grad3 w3-card-4 " style="width:100%;">
+
+                        <header class="w3-container grad4" >
+                            <h1>FRAMEWORKS</h1>
+                        </header>
+
+                        <div class="w3-container">
+                            <h2>AGILE<br>KANBAN<br>RUP</h2> 
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="w3-third w3-container">
+                    <div class="grad3 w3-card-4" style="width:100%;">
+
+                        <header class="w3-container grad4">
+                            <h1>PROGRAMMING</h1>
+                        </header>
+                        <div class="w3-container">
+                            <h2>JAVA<br>HTML<br>CSS</h2> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w3-third w3-container">
+                    <div class="grad3 w3-card-4" style="width:100%;">
+                        <header class="w3-container grad4">
+                            <h1>MANAGEMENT</h1>
+                        </header>
+
+                        <div class="w3-container">
+                            <h2>Jira<br>Confluence<br>Git</h2> 
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="w3-third w3-container">
+                    <div class="grad3 w3-card-4" style="width:100%;margin-top: 35px">
+
+                        <header class="w3-container grad4">
+                            <h1>DESIGN</h1>
+                        </header>
+
+                        <div class="w3-container">
+                            <h2>Sketch<br>Figma<br>Invision</h2> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w3-third w3-container">
+                    <div class="grad3 w3-card-4" style="width:100%;margin-top: 35px">
+
+                        <header class="w3-container grad4">
+                            <h1>LANGUAGES</h1>
+                        </header>
+
+                        <div class="w3-container">
+                            <h2>English C1<br>German B2<br>Russian Native</h2> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w3-third w3-container">
+                    <div class="grad3 w3-card-4" style="width:100%;margin-top: 35px">
+                        <header class="w3-container grad4">
+                            <h1>SOFT SKILLS</h1>
+                        </header>
+                        <div class="w3-container">
+                            <h2>Team player<br>Organised<br>Creative</h2> 
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!--      <p>I am an IT student who is inspired by new technologies, managmenet tools and web development. I have started my Bachelor degree in 2017 at Computer Sciences programm with focus on management and design. Throughout my studies I was facinated by management part and how important it is for success of the whole project, team and company. Therefore I decided to gain more knowledge in this area and transferd to Business Information Technology programm in 2019. I am expected to finish in 2022.</p>-->
+
+        <!--        <p><img src="me.JPG" style="width:150px" class="w3-circle w3-right" alt="Chef"></p>-->
+
+
+        <!-- Moving heads container -->
+        <!--
+<div class="w3-container  w3-pale-blue move">
+</div>
+-->
+
+        <!-- STUDENT PROJECTS container -->
+        <div class="grad w3-container w3-padding-64 w3-xlarge w3-text-white">
+            <div class="w3-container" id="work">
+                <div class="w3-content">
+                    <h1 class="w3-center w3-jumbo w3-text-white" style="margin-bottom:64px">STUDENT PROJECTS</h1>
+                    <h1 class="w3-center grad4 w3-text-white" style="margin-bottom:64px; margin-top: 64px;">VISUAL ELEMENTS FOR WEBSITES</h1>
+                    
+                    
+                      <!-- 1st raw-->
+                    <div class="w3-row-padding w3-center">
+                        <div class="w3-third">
+                            <img src="girl_smile.png" style="width:100%" alt="Icons for a website">
+                        </div>
+
+                        <div class="w3-third">
+                            <img src="girl_design.png" style="width:100%" alt="Icons for a website">
+                        </div>
+
+                        <div class="w3-third">
+                            <img src="girl_heart.png" style="width:100%" alt="Icons for a website">
+                        </div>
+                    </div>
+
+                    
+                    <h1 class="w3-center grad4 w3-text-white" style="margin-bottom:64px; margin-top: 64px;"></h1>
+
+                    <!-- 2d raw-->
+                    <div class="w3-row-padding w3-center">
+                        <div class="w3-third">
+                            <img src="fg2.jpg" style="width:100%" alt="Icons for a website">
+                        </div>
+
+                        <div class="w3-third">
+                            <img src="fg1.jpg" style="width:100%" alt="Icons for a website">
+                        </div>
+
+                        <div class="w3-third">
+                            <img src="fg3.jpg" style="width:100%" alt="Icons for a website">
+                        </div>
+                    </div>
+
+
+                    <!-- 3d raw-->
+
+                    <div class="w3-row-padding w3-center w3-section">
+                        <div class="w3-third">
+                            <img src="g1.jpg" style="width:100%" alt="Icons for a website">
+                        </div>
+
+                        <div class="w3-third">
+                            <img src="fg4.png" style="width:100%" alt="Image for an app">
+                        </div>
+
+                        <div class="w3-third">
+                            <img src="guy_glass.jpg" style="width:100%" alt="Icons for a website">
+                        </div>
+                    </div>
+
+                   
+                    <h1 class="w3-center grad4 w3-text-white" style="margin-bottom:64px; margin-top: 64px;">MOBILE APP PROTOTYPING</h1>
+                    <div class="w3-row-padding w3-center w3-section">
+                        <div class="w3-third">
+                            <img src="screen1.png" style="width:100%" alt="Screens for an app">
+                        </div>
+
+                        <div class="w3-third">
+                            <img src="screen2.png" style="width:100%" alt="Screens for an app">
+                        </div>
+
+                        <div class="w3-third">
+                            <img src="screen6.png" style="width:100%" alt="Screens for an app">
+                        </div>
+                    </div>
+
+                    <h1 class="w3-center grad4 w3-text-white" style="margin-bottom:64px; margin-top: 64px;">PERSONA PROFILE</h1>
+                    <div class="w3-row">
+                        <div class="w3-container w3-center">
+                            <img src="Persona_FW2.png" style="width:100%" alt="Screens for an app">
+                        </div>
+                    </div>
+
+                   
+                    <h1 class="w3-center grad4 w3-text-white" style="margin-bottom:64px; margin-top: 64px;">MOOD BOARDS</h1>
+                    
+                    <div class="w3-row-padding w3-center">
+                        <div class="w3-half">
+                            <img src="moodboard.jpg" style="width:100%" alt="Icons for a website">
+                        </div>
+
+                        <div class="w3-half">
+                            <img src="moodboard2.png" style="width:100%" alt="Icons for a website">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+
+    <!-- Contact -->
+    <div  class="w3-text-white w3-container w3-padding-64 w3-xlarge" style="background-image:linear-gradient(to bottom right, #4A90E2, #DCA8E4);" id="contact">
+
+
+        <div class="w3-content w3-center">
+            <h1 class="w3-jumbo" style="margin-bottom:64px">CONTACT ME</h1>
+
+            <p class="w3-xxlarge">osolga87@gmail.com</p>
+
+            <p><img class="capybara" src="withphone.png"></p> 
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-white w3-padding-16 w3-xxlarge">
+        <div class="text-center move2"></div> 
+        <div class="text-center move"></div>
+    </footer>
+
+    <script>
+        // Tabbed Menu
+        function openMenu(evt, menuName) {
+            var i, x, tablinks;
+            x = document.getElementsByClassName("menu");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < x.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+            }
+            document.getElementById(menuName).style.display = "block";
+            evt.currentTarget.firstElementChild.className += " w3-red";
+        }
+        document.getElementById("myLink").click();
+
+    </script>
+
+    </body>
+</html>
